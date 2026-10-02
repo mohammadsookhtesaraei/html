@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anchor</title>
+</head>
+<body>
+    <a href="https://example.com">Example</a>
+
+    <!-- Relative URL -->
+   <!-- اشاره به داخلی -->
+    <a href="/about.html"></a>
+    <!-- این به سند اچ تی امل داخل همین منبع  اشاره میکنه -->
+
+    <!-- Absolute URL -->
+    <!-- این از نوع ابسلوت کامله -->
+ <a href="https://example.com/products">
+  Products
+</a>
+<!-- ابسلوت نسبت به ارجین یا همون منبع فعلی -->
+<a href="/products">Products</a>
+<!-- این داخل همین صفحه اگه پروداکت بود -->
+<a href="products"></a>
+
+<!-- فرگمنت -->
+<!-- وقتی روی این لینک با این ایدی کلیک میشه میره به سکشنی که این ایدی رو داره -->
+<a href="#reviews">
+  نظرات کاربران
+</a>
+<section id="reviews">
+  <h2>نظرات کاربران</h2>
+</section>
+
+
+<!-- _blank
+     معمولاً مقصد را در 
+     browsing context
+      جدید باز می‌کند؛ 
+     در 
+     Browser
+     های مدرن،
+      رفتار 
+     noopener
+      برای 
+      _blank 
+      به‌صورت پیش‌فرض در نظر گرفته می‌شود،
+       اما 
+       rel 
+     همچنان ابزار مهمی برای بیان رابطه لینک است. -->
+     <a
+  href="https://example.com"
+  target="_blank"
+>
+  Example
+</a>
+
+<!--  rel="noopener noreferrer -->
+<!-- مناسب برای لینک های خارجی -->
+<!-- برای جلوگیری تب هکینک -->
+target="_blank"
+یک صفحه باز شده باشه
+میشه با ویندو اوپنر به محتوای صفحه قبلی دسترسی پیدا کرد
+<!-- نو اوپنر میاد این رفتار رو محدود می کنه -->
+
+noreferrer
+<!-- باعث میشه اطلاعت صفحه قبلی به مقصد ارسال نشود ریفر -->
+<!-- توی مروگرهای مدرن این موضوع حل شده ولی برا مصاحبه می پرسن -->
+<a
+  href="https://example.com"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Example
+</a>
+
+<!-- اتربیوت دانلود برای دانلود -->
+<!-- باز کردن ایمیل کلاینت -->
+<a href="mailto:hello@example.com">
+  Email us
+</a>
+<!-- باز کردن شماره تلفن کلاینت -->
+<a href="tel:+994501234567">
+  تماس با ما
+</a>
+<!-- لینک به فایل -->
+<a href="/documents/terms.pdf">
+  Terms and Conditions
+</a>
+
+<!-- چه زمانی لینک و باتن استفاده کنیم -->
+
+<!-- زمانی که کاربر به یک مقصد دیگه میره از لینک -->
+<!-- زمانی که یک اکشن یک عملیتن در صفحه مثل ارسال فرم باز کردن منو از باتن -->
+
+<!-- توی اچرف از هشتگ خالی استفاده نکن -->
+<!-- ممکنه به فرگمنت خالی صفحه اشاره کند  باعث تغییر اسکرول یا یو ار ال شود -->
+
+
+<!-- example -->
+<nav>
+  <a href="/">خانه</a>
+  <a href="/products">محصولات</a>
+  <a href="/about">درباره ما</a>
+  <a href="/contact">تماس با ما</a>
+</nav>
+
+<!-- example -2 -->
+<nav aria-label="Main navigation">
+  <ul>
+    <li>
+      <a href="/">خانه</a>
+    </li>
+
+    <li>
+      <a href="/products">محصولات</a>
+    </li>
+
+    <li>
+      <a href="/contact">تماس</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- example-3-Breadcrumb -->
+<nav aria-label="Breadcrumb">
+  <ol>
+    <li>
+      <a href="/">خانه</a>
+    </li>
+
+    <li>
+      <a href="/products">محصولات</a>
+    </li>
+
+    <li>
+      <a href="/products/laptops">لپ‌تاپ</a>
+    </li>
+
+    <li>
+      <span aria-current="page">
+        MacBook Pro
+      </span>
+    </li>
+  </ol>
+</nav>
+</body>
+</html>
